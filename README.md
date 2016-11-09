@@ -9,10 +9,10 @@ FastUglifyJsPlugin基于webpack.optimize.UglifyJsPlugin修改，增加了多进�
 	ynpm i @youzan/fast-uglifyjs-plugin --save
 ```
 
-## 式例
+## 示例
 
 ```
-var path = require("path");
+
 var FastUglifyJsPlugin = require('@youzan/fast-uglifyjs-plugin');
 
 module.exports = {
