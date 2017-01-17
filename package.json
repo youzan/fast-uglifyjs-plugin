@@ -14,6 +14,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
-    "webpack": "^1.13.3"
+    "webpack": "^1.13.3",
+    "chalk": "^1.1.3"
   }
 }

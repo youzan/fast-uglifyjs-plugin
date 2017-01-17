@@ -7,9 +7,11 @@ module.exports = {
         path: path.join(__dirname, 'outs'),
         filename: 'factorial.js'
     },
+    devtool: 'eval',
     plugins: [new FastUglifyJsPlugin({
         compress: {
             warnings: false
-        }
+        },
+        // cacheFolder: path.resolve(__dirname, './.uglify/')
     })]
 };
