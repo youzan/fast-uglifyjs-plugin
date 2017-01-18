@@ -22,6 +22,10 @@ module.exports = {
         compress: {
             warnings: false
         }
+        // 默认开启缓存，提高uglify效率，关闭请使用:
+        // cache: false,
+        // 默认缓存路径为项目根目录，手动配置请使用:
+        // cacheFolder: path.resolve(__dirname, './.otherFolder/')
     })]
 };
 ```
