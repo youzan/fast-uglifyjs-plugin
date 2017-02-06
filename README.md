@@ -7,14 +7,13 @@ cache会缓存上一次uglify结果，下次uglify时未修改的文件将会直
 
 ## 安装
 
-```
-	ynpm i @youzan/fast-uglifyjs-plugin --save
+```shell
+ynpm i @youzan/fast-uglifyjs-plugin --save
 ```
 
 ## 示例
 
-```
-
+```js
 var FastUglifyJsPlugin = require('@youzan/fast-uglifyjs-plugin');
 
 module.exports = {
@@ -33,3 +32,11 @@ module.exports = {
     })]
 };
 ```
+
+## 效果
+
+|使用|结果|
+|------|---------|
+|webpack built-in plugin:|Finished after 7.4 min|
+|FastUglifyJsPlugin without cache:|Finished after 4.45 min|
+|FastUglifyJsPlugin with cache:|Finished after 36 s|
