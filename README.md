@@ -7,7 +7,7 @@
 |FastUglifyJsPlugin without cache|4.45 min|
 |FastUglifyJsPlugin with cache|36 s|
 
-测试样本：29 entry,1924 modules
+测试样本：29 entry,2615 modules
 
 测试环境：MacBook Pro，4核cpu,8g内存
 
