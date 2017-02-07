@@ -1,9 +1,11 @@
 ## 简介
-FastUglifyJsPlugin基于webpack.optimize.UglifyJsPlugin修改，增加了多进程和cache的支持。用法和webpack.optimize.UglifyJsPlugin完全一样。
+生产环境的构建，uglify过程占了70%左右的时间，是一个非常耗时的过程。相对于webpack原生UglifyJsPlugin，FastUglifyJsPlugin增加了多进程和缓存。多进程可以最大限度的利用多核cpu的计算能力，缓存可以按需编译，减少不必要的计算。以下是一组性能测试数据，FastUglifyJsPlugin的性能提升非常明显。
 
-生产环境的构建，uglify过程占了70%左右的时间。多进程可以提高uglify对cpu的利用，缩短构建时间。
-
-cache会缓存上一次uglify结果，下次uglify时未修改的文件将会直接读取cache作为uglify结果，大大减少不必要的重复操作。
+|插件|耗时|
+|------|---------|
+|webpack.optimize.UglifyJsPlugin|7.4 min|
+|FastUglifyJsPlugin without cache|4.45 min|
+|FastUglifyJsPlugin with cache|36 s|
 
 ## 安装
 
@@ -11,7 +13,8 @@ cache会缓存上一次uglify结果，下次uglify时未修改的文件将会直
 ynpm i @youzan/fast-uglifyjs-plugin --save
 ```
 
-## 示例
+## 配置
+FastUglifyJsPlugin基于webpack.optimize.UglifyJsPlugin修改，用法和webpack.optimize.UglifyJsPlugin完全一样，只是增加了几个额外的配置参数。
 
 ```js
 var FastUglifyJsPlugin = require('@youzan/fast-uglifyjs-plugin');
@@ -32,11 +35,3 @@ module.exports = {
     })]
 };
 ```
-
-## 效果
-
-|使用|结果|
-|------|---------|
-|webpack built-in plugin:|Finished after 7.4 min|
-|FastUglifyJsPlugin without cache:|Finished after 4.45 min|
-|FastUglifyJsPlugin with cache:|Finished after 36 s|
