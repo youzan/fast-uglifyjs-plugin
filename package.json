@@ -1,6 +1,6 @@
 {
   "name": "@youzan/fast-uglifyjs-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "webpack.optimize.UglifyJsPlugin的多进程实现版本",
   "main": "index.js",
   "scripts": {
