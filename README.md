@@ -15,14 +15,14 @@
 ## 安装
 
 ```shell
-ynpm i @youzan/fast-uglifyjs-plugin --save
+npm i fast-uglifyjs-plugin --save
 ```
 
 ## 配置
 FastUglifyJsPlugin基于webpack.optimize.UglifyJsPlugin修改，用法和webpack.optimize.UglifyJsPlugin完全一样，只是增加了几个额外的配置参数。
 
 ```js
-var FastUglifyJsPlugin = require('@youzan/fast-uglifyjs-plugin');
+var FastUglifyJsPlugin = require('fast-uglifyjs-plugin');
 
 module.exports = {
     entry: {...},

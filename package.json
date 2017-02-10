@@ -1,20 +1,21 @@
 {
-  "name": "@youzan/fast-uglifyjs-plugin",
-  "version": "0.1.2",
-  "description": "webpack.optimize.UglifyJsPlugin的多进程实现版本",
+  "name": "fast-uglifyjs-plugin",
+  "version": "0.1.3",
+  "description": "hight performance uglify plugin for webpack",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.qima-inc.com:sz-web/fast-uglifyjs-plugin.git"
-  },
-  "author": "liwei@youzan.com",
+  "author": "liwei <vinnyguitar@126.com>",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^3.1.2",
     "webpack": "^1.13.3",
     "chalk": "^1.1.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.qima-inc.com:sz-web/fast-uglifyjs-plugin.git"
+  },
+  "license": "MIT"
 }
