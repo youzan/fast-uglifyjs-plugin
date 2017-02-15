@@ -1,0 +1,42 @@
+## introduction
+The uglify process of building project in production environment is very time consuming. It could take up to 70% of the build time. FastUglifyJsPlugin have multi-process and cache feature comparing to webpack's UglifyJsPlugin. Multi-process can utilize multicore cpu's caculation capability. Cache can minimize the need to complie code. Below is a set of performance testing data. FastUglifyJsPlugin has a way better performace.
+
+|plugin|time|
+|------|---------|
+|webpack.optimize.UglifyJsPlugin|7.4 min|
+|FastUglifyJsPlugin without cache|4.45 min|
+|FastUglifyJsPlugin with cache|36 s|
+
+test sample：29 entry,2615 modules
+
+test environment：MacBook Pro，4 core cpu,8g memory
+
+
+## installation
+
+```shell
+npm i fast-uglifyjs-plugin --save
+```
+
+## configuration
+FastUglifyJsPlugin is base on webpack.optimize.UglifyJsPlugin. They have the same usage except for a few extra configuration.
+
+```js
+var FastUglifyJsPlugin = require('fast-uglifyjs-plugin');
+
+module.exports = {
+    entry: {...},
+    output: {...},
+    plugins: [new FastUglifyJsPlugin({
+        compress: {
+            warnings: false
+        },
+        // set debug as true to output detail cache information           
+        // debug: true
+        // enable cache by default to improve uglify performance. set false to turn it off
+        // cache: false,
+        // root directory is the default cache path. it can be configured by following setting
+        // cacheFolder: path.resolve(__dirname, '.otherFolder')
+    })]
+};
+```
