@@ -1,25 +1,27 @@
-## 简介
-生产环境的构建，uglify过程占了70%左右的时间，是一个非常耗时的过程。相对于webpack原生UglifyJsPlugin，FastUglifyJsPlugin增加了多进程和缓存。多进程可以最大限度的利用多核cpu的计算能力，缓存可以按需编译，减少不必要的计算。以下是一组性能测试数据，FastUglifyJsPlugin的性能提升非常明显。
+## Introduction
+[中文文档](https://github.com/youzan/fast-uglifyjs-plugin/blob/master/README_ZH.md)
 
-|插件|耗时|
+The uglify process of building project in production environment is very time consuming. It could take up to 70% of the build time. FastUglifyJsPlugin have multi-process and cache feature comparing to webpack's UglifyJsPlugin. Multi-process can utilize multicore cpu's caculation capability. Cache can minimize the need to complie code. Below is a set of performance testing data. FastUglifyJsPlugin has a way better performace.
+
+|plugin|time|
 |------|---------|
 |webpack.optimize.UglifyJsPlugin|7.4 min|
 |FastUglifyJsPlugin without cache|4.45 min|
 |FastUglifyJsPlugin with cache|36 s|
 
-测试样本：29 entry,2615 modules
+test sample：29 entry,2615 modules
 
-测试环境：MacBook Pro，4核cpu,8g内存
+test environment：MacBook Pro，4 core cpu,8g memory
 
 
-## 安装
+## Installation
 
 ```shell
 npm i fast-uglifyjs-plugin --save
 ```
 
-## 配置
-FastUglifyJsPlugin基于webpack.optimize.UglifyJsPlugin修改，用法和webpack.optimize.UglifyJsPlugin完全一样，只是增加了几个额外的配置参数。
+## Configuration
+FastUglifyJsPlugin is base on webpack.optimize.UglifyJsPlugin. They have the same usage except for a few extra configuration.
 
 ```js
 var FastUglifyJsPlugin = require('fast-uglifyjs-plugin');
@@ -31,12 +33,16 @@ module.exports = {
         compress: {
             warnings: false
         },
-        // debug设为true可输出详细缓存使用信息:
-        // debug: true
-        // 默认开启缓存，提高uglify效率，关闭请使用:
-        // cache: false,
-        // 默认缓存路径为项目根目录，手动配置请使用:
-        // cacheFolder: path.resolve(__dirname, '.otherFolder')
+        // set debug as true to output detail cache information           
+        debug: true
+        // enable cache by default to improve uglify performance. set false to turn it off
+        cache: false,
+        // root directory is the default cache path. it can be configured by following setting
+        cacheFolder: path.resolve(__dirname, '.otherFolder'),
+        // num of worker process default ,os.cpus().length
+        worderNum: 2
     })]
 };
 ```
+### Licence
+MIT

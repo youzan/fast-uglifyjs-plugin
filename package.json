@@ -1,11 +1,12 @@
 {
   "name": "fast-uglifyjs-plugin",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "hight performance uglify plugin for webpack",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha test"
   },
+  "keywords": ["cache", "uglify", "multi-process"],
   "author": "liwei <vinnyguitar@126.com>",
   "devDependencies": {
     "chai": "^3.5.0",
