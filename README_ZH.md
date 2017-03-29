@@ -1,4 +1,7 @@
 ## 简介
+
+兼容webpack 2
+
 生产环境的构建，uglify过程占了70%左右的时间，是一个非常耗时的过程。相对于webpack原生UglifyJsPlugin，FastUglifyJsPlugin增加了多进程和缓存。多进程可以最大限度的利用多核cpu的计算能力，缓存可以按需编译，减少不必要的计算。以下是一组性能测试数据，FastUglifyJsPlugin的性能提升非常明显。
 
 |插件|耗时|

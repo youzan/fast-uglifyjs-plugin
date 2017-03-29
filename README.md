@@ -1,6 +1,8 @@
 ## Introduction
 [中文文档](https://github.com/youzan/fast-uglifyjs-plugin/blob/master/README_ZH.md)
 
+compatible with webpack 2
+
 The uglify process of building project in production environment is very time consuming. It could take up to 70% of the build time. FastUglifyJsPlugin have multi-process and cache feature comparing to webpack's UglifyJsPlugin. Multi-process can utilize multicore cpu's caculation capability. Cache can minimize the need to complie code. Below is a set of performance testing data. FastUglifyJsPlugin has a way better performace.
 
 |plugin|time|
