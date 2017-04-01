@@ -1,6 +1,6 @@
 {
   "name": "fast-uglifyjs-plugin",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "hight performance uglify plugin for webpack",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.qima-inc.com:sz-web/fast-uglifyjs-plugin.git"
+    "url": "https://github.com/youzan/fast-uglifyjs-plugin"
   },
   "license": "MIT"
 }
