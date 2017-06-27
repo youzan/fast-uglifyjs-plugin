@@ -7,13 +7,14 @@ module.exports = {
         path: path.join(__dirname, 'outs'),
         filename: 'factorial.js'
     },
-    devtool: 'eval',
+    devtool: '#source-map',
     plugins: [
         new FastUglifyJsPlugin({
             compress: {
                 warnings: false
             },
             debug: true,
+            sourceMap: true,
             // cache: false,
             // cacheFolder: path.resolve(__dirname, './.otherFolder/')
         })

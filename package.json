@@ -4,7 +4,7 @@
   "description": "hight performance uglify plugin for webpack",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha test"
+    "test": "rm -rf .uglify && node_modules/mocha/bin/mocha test"
   },
   "keywords": ["cache", "uglify", "multi-process"],
   "author": "liwei <vinnyguitar@126.com>",
