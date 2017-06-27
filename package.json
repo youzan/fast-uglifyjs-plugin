@@ -1,6 +1,6 @@
 {
   "name": "fast-uglifyjs-plugin",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "description": "hight performance uglify plugin for webpack",
   "main": "index.js",
   "scripts": {
