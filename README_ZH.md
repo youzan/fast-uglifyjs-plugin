@@ -44,7 +44,7 @@ module.exports = {
             warnings: false
         },
         // debug设为true可输出详细缓存使用信息:
-        debug: true
+        debug: true,
         // 默认开启缓存，提高uglify效率，关闭请使用:
         cache: false,
         // 默认缓存路径为项目根目录，手动配置请使用:
