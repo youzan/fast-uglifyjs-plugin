@@ -45,7 +45,7 @@ module.exports = {
             warnings: false
         },
         // set debug as true to output detail cache information           
-        debug: true
+        debug: true,
         // enable cache by default to improve uglify performance. set false to turn it off
         cache: false,
         // root directory is the default cache path. it can be configured by following setting
